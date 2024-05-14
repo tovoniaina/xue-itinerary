@@ -1,0 +1,677 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Baobab Safari &amp; Indri Encounter for Xue Zhi Bai</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="43aa70ca-80ce-45b1-8ff6-e8e6c4405dd3" class="page sans"><header><img class="page-cover-image" src="Baobab%20Safari%20&amp;%20Indri%20Encounter%20for%20Xue%20Zhi%20Bai%2043aa70ca80ce45b18ff6e8e6c4405dd3/Linkedin_-_CoverCover.jpg" style="object-position:center 50%"/><div class="page-header-icon page-header-icon-with-cover"><span class="icon">✈️</span></div><h1 class="page-title">Baobab Safari &amp; Indri Encounter for Xue Zhi Bai</h1><p class="page-description"></p></header><div class="page-body"><h1 id="cf0dc574-89f0-401d-bafb-8767e533da72" class="">Map</h1><figure id="69d55a7e-0b37-497b-b0b8-c32e2333c61c" class="image"><a href="Baobab%20Safari%20&amp;%20Indri%20Encounter%20for%20Xue%20Zhi%20Bai%2043aa70ca80ce45b18ff6e8e6c4405dd3/Untitled.png"><img style="width:708px" src="Baobab%20Safari%20&amp;%20Indri%20Encounter%20for%20Xue%20Zhi%20Bai%2043aa70ca80ce45b18ff6e8e6c4405dd3/Untitled.png"/></a></figure><h1 id="2bd46fec-6708-442f-962c-7645375506ca" class="">Tour duration:</h1><h3 id="14001255-fa0a-425b-a993-1a4b50e06f70" class="">⇒ 10 Days &amp; 9 nights</h3><h1 id="7c7473b8-e9bd-49ee-a1ab-0ae266afba4a" class="">There is 2 domestic flights on this tour</h1><ol type="1" id="49d3f391-031c-4c77-9b56-105d76b10625" class="numbered-list" start="1"><li>Day 4 (Sept 24) ⇒ Antananarivo - Morondava</li></ol><ol type="1" id="46ce7171-227e-4e45-8502-76b38dae649f" class="numbered-list" start="2"><li>Day 9 (Sept 29) ⇒ Morondava - Antananarivo</li></ol><p id="7bc32826-65fd-4ea6-93ee-e980872333da" class="">If you agree with this itinerary, please book your flight in this website </p><p id="be1880b1-3a88-4150-95b6-c5b9eed3c0f1" class=""><strong>⇒ </strong><strong><a href="https://madagascarairlines.com/en/index.html">https://madagascarairlines.com/en/index.html</a></strong><strong> </strong></p><figure id="c26e0b6f-cdb2-4e94-808b-561fa9488fbc" class="image"><a href="Baobab%20Safari%20&amp;%20Indri%20Encounter%20for%20Xue%20Zhi%20Bai%2043aa70ca80ce45b18ff6e8e6c4405dd3/Untitled%201.png"><img style="width:708px" src="Baobab%20Safari%20&amp;%20Indri%20Encounter%20for%20Xue%20Zhi%20Bai%2043aa70ca80ce45b18ff6e8e6c4405dd3/Untitled%201.png"/></a></figure><figure id="8130b789-dedd-4a84-82ff-e272cccee796" class="image"><a href="Baobab%20Safari%20&amp;%20Indri%20Encounter%20for%20Xue%20Zhi%20Bai%2043aa70ca80ce45b18ff6e8e6c4405dd3/Untitled%202.png"><img style="width:708px" src="Baobab%20Safari%20&amp;%20Indri%20Encounter%20for%20Xue%20Zhi%20Bai%2043aa70ca80ce45b18ff6e8e6c4405dd3/Untitled%202.png"/></a></figure><h1 id="2d933efc-969f-4d51-afc1-a05e4e56326a" class="">Adventure Level</h1><ul id="aea06905-8edd-43cb-8443-7775cec196a1" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-gray"><em>Easy</em></mark></li></ul><ul id="7e94bd9b-754f-4b4e-bb10-f9ac63bfadc7" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-gray"><em>⇒ Medium</em></mark></li></ul><ul id="f650bf28-4b74-468c-8d64-be93bac0db7e" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-orange">⇒ </mark><mark class="highlight-orange"><strong>Mix of Medium &amp; Hard</strong></mark></li></ul><ul id="e03d4d11-55f6-474f-811d-655e9bfae631" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-gray"><em>Hard</em></mark></li></ul><h1 id="e28b867c-614f-4bc2-9201-2d396f674805" class=""><strong>Day 1 (Sept 21):</strong> Arrival in Tana - Drive to Andasibe</h1><p id="b5ccfa7d-f7ff-490b-b040-8352e2ea23ab" class="">Upon arrival in Antananarivo (Tana in short), you will be met and welcomed by a representative from our company. And then, you shall have your private car taking you to your first destination, Andasibe, where you&#x27;ll meet the lemurs the next day</p><h3 id="38c23183-1c11-472d-b7a5-0d387a43fe01" class="">Overnight :  Andasibe Cyperus Hotel ★★★</h3><figure id="1d2e2d17-22c1-4ae6-919a-94c8024b87b6" class="image"><a href="Baobab%20Safari%20&amp;%20Indri%20Encounter%20for%20Xue%20Zhi%20Bai%2043aa70ca80ce45b18ff6e8e6c4405dd3/Untitled%203.png"><img style="width:1346px" src="Baobab%20Safari%20&amp;%20Indri%20Encounter%20for%20Xue%20Zhi%20Bai%2043aa70ca80ce45b18ff6e8e6c4405dd3/Untitled%203.png"/></a></figure><h1 id="c82b6695-96a0-4e53-a11f-31570147b730" class=""><strong>Day 2 (Sept 22):</strong> Explore Andasibe (Analamazaotra Reserve + Vakona Reserve)</h1><p id="8ce2267a-7e69-46f0-bfb4-0618c10bb6eb" class="">We explore the reserve of Analamazoatra where the Indri and other species of lemurs, birds, reptiles and so forth dwell in this primary and secondary forest. Be ready to take lots of photos recording the haunting calls of the indri</p><p id="1eb369e2-e3fa-4a04-84e1-8ff933932019" class="">At Vakona Reserve, be captivated by the indri indri, the largest lemurs in the world, and observe the sifaka lemurs with their unique dancing gait, adding an exotic charm to your experience.</p><h3 id="101c5cc1-3489-4557-8309-764febef9aa1" class="">Overnight : Andasibe Cyperus Hotel ★★★</h3><figure id="e4d74628-3035-46f8-8af0-7aaea4516401" class="image"><a href="Baobab%20Safari%20&amp;%20Indri%20Encounter%20for%20Xue%20Zhi%20Bai%2043aa70ca80ce45b18ff6e8e6c4405dd3/Untitled%204.png"><img style="width:1760px" src="Baobab%20Safari%20&amp;%20Indri%20Encounter%20for%20Xue%20Zhi%20Bai%2043aa70ca80ce45b18ff6e8e6c4405dd3/Untitled%204.png"/></a></figure><figure id="4d949b97-e9ba-4de8-b400-685926f47c94" class="image"><a href="Baobab%20Safari%20&amp;%20Indri%20Encounter%20for%20Xue%20Zhi%20Bai%2043aa70ca80ce45b18ff6e8e6c4405dd3/Untitled%205.png"><img style="width:1758px" src="Baobab%20Safari%20&amp;%20Indri%20Encounter%20for%20Xue%20Zhi%20Bai%2043aa70ca80ce45b18ff6e8e6c4405dd3/Untitled%205.png"/></a></figure><h1 id="e29b742e-3d9c-41c5-bf7a-5f6c70f56c4c" class=""><strong>Day 3 (Sept 23):</strong> Andasibe to Tana (Visit Lemurs Park upon arrival) </h1><p id="ac7f10df-cb1a-4b9c-beb8-f6b9ae8fed60" class="">We&#x27;ll be leaving Andasibe early in the morning for Antananarivo</p><p id="8203e76a-ce6e-478c-9b0e-9bb1f5be4890" class="">Upon arrival in Tana, We&#x27;re off to Lemurs park, 22km west of Tana, where you&#x27;ll meet Lemur catta and many other Madagascar lemurs.</p><h3 id="2ac73c18-6056-48d0-a0c8-bde0cecb86f7" class="">Overnight : Radisson Blu ★★★★★</h3><figure id="6d21bd1d-975b-44c5-834c-6c0b1346ffb6" class="image"><a href="Baobab%20Safari%20&amp;%20Indri%20Encounter%20for%20Xue%20Zhi%20Bai%2043aa70ca80ce45b18ff6e8e6c4405dd3/Untitled%206.png"><img style="width:1966px" src="Baobab%20Safari%20&amp;%20Indri%20Encounter%20for%20Xue%20Zhi%20Bai%2043aa70ca80ce45b18ff6e8e6c4405dd3/Untitled%206.png"/></a></figure><h1 id="5f4c44fc-2d52-4459-9150-12a6b1eed79f" class=""><strong>Day 4 (Sept 24):</strong> Flight from Tana to Morondava - Drive to Kirindy (Night walk in the forest)</h1><p id="c5f17d25-6dfd-45fa-832b-32c18da1a7ec" class="">You will be transferred to the airport for your flight to Morondava. Upon arrival, a member of our team will pick you up and transfer you in your private 4x4 vehicle going to Kirindy Forest. Settle in and then night safari walk in search of tiny mouse lemur, chameleons and other animals endemic in this forest.</p><h3 id="f3ceebdf-dca9-4fba-8fbd-ae61e7b5b603" class=""><strong>Overnight : Relais de Kirindy </strong>★★★</h3><figure id="4fd09c83-96de-4eaf-baae-0589bdb9fb1e" class="image"><a href="Baobab%20Safari%20&amp;%20Indri%20Encounter%20for%20Xue%20Zhi%20Bai%2043aa70ca80ce45b18ff6e8e6c4405dd3/Untitled.jpeg"><img style="width:708px" src="Baobab%20Safari%20&amp;%20Indri%20Encounter%20for%20Xue%20Zhi%20Bai%2043aa70ca80ce45b18ff6e8e6c4405dd3/Untitled.jpeg"/></a></figure><h1 id="15c1c565-d6cc-445a-9229-ddddf1a33f53" class=""><strong>Day 5 (Sept 25):</strong> Kirindy Forest visit (2hours) then drive to Bekopaka</h1><p id="68901606-b52e-4203-875d-132717bc44b9" class="">In the morning, we visit the reserve of Kirindy, a dry deciduous forest home of the Fosa</p><p id="506932c9-485a-471a-a1b6-a21986483881" class="">(the biggest lemurs’ predator), the jumping rat and harboring seven species of lemur</p><p id="58985a75-6c38-499e-97d9-b02db9c9d518" class="">including the dancing Verreaux&#x27;s sifakas, the tiny mouse lemur of Madame Berthe, and</p><p id="8c2efc35-7148-4884-9a25-e0ae3832ae51" class="">common brown lemurs. Besides, 50 species of reptiles, 15 amphibian species and 40</p><p id="15776f30-b8dd-4c2c-bf9b-e7024016f0fc" class="">species of birds are also found in this magnificent forest without forgetting several bats,</p><p id="3a14797b-1e93-4027-b9ea-4061a7d223c3" class="">tenrecs, mongooses and rodents completing the mammal population. After the visit,</p><p id="0f07195b-322b-4730-8de0-21f6f98c27b6" class="">drive to Bekopaka crossing the Tsiribihina river on a ferry to reach the town of Belo sur</p><p id="a43c2546-7f53-44b6-8eb0-a672a2bbc04f" class="">Tsirbihina, the cultural capital of the Sakalava tribe.</p><h3 id="dc9e71d6-aa69-486b-9c43-b2d4e181d8e4" class="">Overnight : Olympe de Bemaraha ★★★</h3><figure id="bfd278ae-febf-4288-ba95-2d0601298dbc" class="image"><a href="Baobab%20Safari%20&amp;%20Indri%20Encounter%20for%20Xue%20Zhi%20Bai%2043aa70ca80ce45b18ff6e8e6c4405dd3/Untitled%201.jpeg"><img style="width:708px" src="Baobab%20Safari%20&amp;%20Indri%20Encounter%20for%20Xue%20Zhi%20Bai%2043aa70ca80ce45b18ff6e8e6c4405dd3/Untitled%201.jpeg"/></a></figure><h1 id="fa8ad9c2-f575-4ee2-adb7-ad7d56997b88" class=""><strong>Day 6 (Sept 26) : </strong>Bekopaka (Big Tsingy visit)</h1><p id="3637accd-1c8b-49d5-aebd-0644451180f8" class="">Departure from the River at 8:00 to the entrance of the Park (distance 15 km and 30 minutes drive).</p><p id="8f4f6912-a362-4ace-84be-5e5c3123360e" class=""><strong>Activities :</strong></p><ul id="3d44833a-0f5f-4a78-984b-5c991ac4205f" class="bulleted-list"><li style="list-style-type:disc">Beginning of the BEMARAHA NATIONAL PARK, starting first with the Forest and GREAT TSINGY and ending with the Cave. (Visit for 6 to 8 hours of time depends on the Guests).</li></ul><ul id="3a8891ae-6168-4131-83c1-363fa0abc933" class="bulleted-list"><li style="list-style-type:disc">Visiting the Park you will also enjoy climbing on the Tsingy by doing some</li></ul><ul id="e13246d9-5a37-4bda-9105-b35446fff7c3" class="bulleted-list"><li style="list-style-type:disc">Climbing but you will be well equipped with the entrance of the Park.</li></ul><ul id="37f8ca2d-9035-41f7-9a5b-8b800cdb82ed" class="bulleted-list"><li style="list-style-type:disc">We’ll pass and across the two SUSPENSION BRIDGE.</li></ul><h3 id="dbc97167-0a76-4416-be53-2ea3b1e3b815" class="">Overnight : Olympe de Bemaraha ★★★</h3><figure id="353cb3dc-d417-45ba-9f3d-3f3f403a08fb" class="image"><a href="Baobab%20Safari%20&amp;%20Indri%20Encounter%20for%20Xue%20Zhi%20Bai%2043aa70ca80ce45b18ff6e8e6c4405dd3/Untitled%202.jpeg"><img style="width:708px" src="Baobab%20Safari%20&amp;%20Indri%20Encounter%20for%20Xue%20Zhi%20Bai%2043aa70ca80ce45b18ff6e8e6c4405dd3/Untitled%202.jpeg"/></a></figure><h1 id="79933ff0-6a30-4c67-bd32-bdbb7a3ef5bd" class=""><strong>Day 7 (Sept 27):</strong> Bekopaka (Small Tsingy visit + Manambolo gorge River descent + caves visit)</h1><p id="09c9d7a3-bbcf-489f-8844-27264c9c3922" class="">Visiting a petit Tsingy and descending the Manambolo river in Bekopaka is an exciting adventure that offers stunning views of the unique landscape. Visitors can explore the limestone formations of the petit Tsingy and observe the diverse flora and fauna of the area. The descent of the Manambolo river provides an opportunity to view the towering cliffs that line the river and catch a glimpse of the wildlife that calls the river home. Activities to do include wildlife viewing, and enjoying the breathtaking scenery, visit 2 different caves and the vazimba tombs</p><h3 id="729395b6-745f-4f84-8371-64cb23b9cb12" class="">Overnight : Olympe de Bemaraha ★★★</h3><figure id="b222ccac-6734-435b-ae02-f23e68f72a79" class="image"><a href="Baobab%20Safari%20&amp;%20Indri%20Encounter%20for%20Xue%20Zhi%20Bai%2043aa70ca80ce45b18ff6e8e6c4405dd3/Untitled%203.jpeg"><img style="width:708px" src="Baobab%20Safari%20&amp;%20Indri%20Encounter%20for%20Xue%20Zhi%20Bai%2043aa70ca80ce45b18ff6e8e6c4405dd3/Untitled%203.jpeg"/></a></figure><h1 id="897095b8-7cfc-4d04-81b3-0c13952ad245" class=""><strong>Day 8 (Sept 28):</strong> Drive back to Morondava from Bekopaka stop at Baobab Alley in the sunset - Return to Morondava </h1><p id="ed43ec23-75b8-4113-bb4b-4ae8c41d9426" class="">After breakfast, we depart back to Morondava. There will be stops en-route including the ‘amorous baobab’, the Baobab Alley where you can have a nice photo at sunset time. Baobabs are distinctive trees adapted to thrive in harsh conditions.</p><p id="3766938e-e450-45ca-b88e-7398e2e43ca4" class=""><strong>Activities :</strong> Baobab alley visit + Sunset photography time</p><h3 id="651fe435-9b4d-436f-a616-750e10d8c0c2" class="">Overnight : <strong>Laguna Beach Hotel </strong>★★★</h3><figure id="7151d15f-dd7b-46d1-869a-2e4cf767aa30" class="image"><a href="Baobab%20Safari%20&amp;%20Indri%20Encounter%20for%20Xue%20Zhi%20Bai%2043aa70ca80ce45b18ff6e8e6c4405dd3/Untitled%204.jpeg"><img style="width:708px" src="Baobab%20Safari%20&amp;%20Indri%20Encounter%20for%20Xue%20Zhi%20Bai%2043aa70ca80ce45b18ff6e8e6c4405dd3/Untitled%204.jpeg"/></a></figure><h1 id="f312f082-d132-4fba-845f-e2522f115e2d" class=""><strong>Day 9 (Sept 29): </strong>Return flight to Tana - Visit Ambohimanga Rova</h1><p id="9e1b2c9d-6bef-4452-a5b7-0677c7e798e7" class="">Transfer to the airport for flight back to Tana,</p><p id="f176be1a-e066-45e6-9d8b-c421c570bb73" class="">Upon your arrival, Visiting Ambohimanga Rova in Antananarivo is a fascinating dive into the royal history and culture of Madagascar. Ambohimanga, which means &quot;blue hill,&quot; is a UNESCO World Heritage site, famed for being the residence of Malagasy kings and a sacred place for the Malagasy people.</p><h3 id="ad47f45b-8706-4c72-8248-f53842dca6ae" class=""><strong>Highlights:</strong></h3><ul id="30759c3f-e66f-4085-9451-c2283fcea21b" class="bulleted-list"><li style="list-style-type:disc"><strong>Royal Architecture and Relics:</strong> Explore the ancient royal residences, historic massive wooden gates, and fortifications.</li></ul><ul id="c19b1269-1587-4b1a-be1d-cf74afd7bd5e" class="bulleted-list"><li style="list-style-type:disc"><strong>Historical Artifacts:</strong> View royal artifacts, including traditional drums, weapons, and photographs of royalty.</li></ul><ul id="f75d0aad-a21b-47b3-8df0-010bfc0c1c4c" class="bulleted-list"><li style="list-style-type:disc"><strong>Panoramic Views:</strong> Enjoy the breathtaking views over the surrounding area from the top of the hill.</li></ul><ul id="54a95d98-456d-4552-91ab-2103734cb686" class="bulleted-list"><li style="list-style-type:disc"><strong>Rituals and Traditions:</strong> Learn about the customs and spiritual beliefs that continue to influence the region&#x27;s inhabitants.</li></ul><h3 id="ca3d2c4a-51a3-4916-bb71-9ad452bde828" class=""><strong>Overnight : Radisson Blu </strong>★★★★★</h3><figure id="1ebaac6b-766d-4b81-9040-31ef9c124965" class="image"><a href="Baobab%20Safari%20&amp;%20Indri%20Encounter%20for%20Xue%20Zhi%20Bai%2043aa70ca80ce45b18ff6e8e6c4405dd3/Untitled%207.png"><img style="width:2044px" src="Baobab%20Safari%20&amp;%20Indri%20Encounter%20for%20Xue%20Zhi%20Bai%2043aa70ca80ce45b18ff6e8e6c4405dd3/Untitled%207.png"/></a></figure><h1 id="f6132d44-4f18-4b2d-9207-5d668a33dc5d" class=""><br/><br/><strong>Day 10 (Sept 30): </strong>Tana City Tour including the Queen&#x27;s Palace - Departure</h1><p id="78b4be70-dbe2-4a66-9850-28e3c507bfa3" class="">This morning, we shall have an ample time for city tour visiting some places, Queen’s palace, Analakely Market, the lake Anosy and the famous Digue handicraft market for souvenirs made from raffia, woodcarvings, semi-precious stones, and so forth. Then, drive to the airport for flight taking you back home.</p><h3 id="c91b15ed-2602-400e-90b3-06381dbc9656" class="">End of our service</h3><figure id="f941a4c0-0438-4cc9-93a4-1bc51a441550" class="image"><a href="Baobab%20Safari%20&amp;%20Indri%20Encounter%20for%20Xue%20Zhi%20Bai%2043aa70ca80ce45b18ff6e8e6c4405dd3/Untitled%206.png"><img style="width:1966px" src="Baobab%20Safari%20&amp;%20Indri%20Encounter%20for%20Xue%20Zhi%20Bai%2043aa70ca80ce45b18ff6e8e6c4405dd3/Untitled%206.png"/></a></figure><h1 id="10427109-5e6f-4299-9183-a2873195d02c" class="">Inclusions</h1><p id="f456d48c-c672-4c9a-84d8-7c6741abaccb" class="">1/ Accomodations in the Hotel + Breakfast</p><p id="adf152e9-ca9c-42b8-939d-a8bc28a60571" class="">2/ 4x4 Car + Fuel During the tour</p><p id="b3f8704b-032d-414a-acc5-9e31cdeb2615" class="">3/ Licensed English driver guide during the tour</p><p id="32bdc1ee-5e25-4fc1-a207-5a1378808fad" class="">4/ Local guides fees</p><p id="9c905f53-b9e4-4082-8550-e97e09716e22" class="">5/ Park tickets entry fees</p><p id="08440c17-4305-4910-813c-477d971c5926" class="">6/ Ferry fees </p><h1 id="30b63103-411a-466c-82b8-377c8f929e94" class=""><strong>Exclusions</strong></h1><p id="3ea972a5-9580-46e0-9a3c-7f0f007ca71d" class="">1/ Flights</p><p id="de777e82-5db6-4f58-af78-48022b2895ec" class="">2/ Dinners &amp; Lunches</p><p id="d3203cc3-2e84-4b5d-a6c6-15d5aa7d7b84" class="">3/ Personal spending, drinks, dinner and lunches</p><p id="c24c4585-52c5-4a42-b1f6-968fbef6121f" class="">4/ Gratuities for the local team</p><h1 id="87c45cee-5a91-47fd-ba05-b93df17dbeb5" class="">Tour fee</h1><table id="d622496a-7c0b-4c4d-a61c-f31c8cefa59a" class="simple-table"><tbody><tr id="1c1cbbd1-64f2-4343-a10c-51b1b67c2972"><td id="AewY" class=""><strong>Days / nights</strong></td><td id="hfd_" class=""><strong>Total for 2 Pax</strong></td></tr><tr id="fe30c7d3-e66d-4cc4-aa02-d9996d1d8ad2"><td id="AewY" class="">10 Days /  9 nights</td><td id="hfd_" class="">$5,100</td></tr></tbody></table></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
